@@ -8,9 +8,9 @@
 
 // ----------------------
 // trabalho final SIN 110
-// EVERTON HHENRIQUE RIBEIRO DA SILVA 6000
-// MATEUS VIEIRA DA SILVA 6002
-// PAULO VITOR DA SILVA NERES 6006
+// EVERTON HHENRIQUE RIBEIRO DA SILVA
+// MATEUS VIEIRA DA SILVA
+// PAULO VITOR DA SILVA NERES
 // ----------------------
 
 typedef struct label{
@@ -35,9 +35,9 @@ typedef struct label{
 }var;
 
 //---------------------------------------------------------------------------------------
-/*A funÁ„o ganhar() preenche um vetor com as possibilidades de vitÛria e verifica,
-utilizando a funÁ„o search() se um dos players chegou ‡ uma condiÁ„o de vitÛria,
-se isso ocorre passa para a funÁ„o main(): o player vencedor ou velha
+/*A fun√ß√£o ganhar() preenche um vetor com as possibilidades de vit√≥ria e verifica,
+utilizando a fun√ß√£o search() se um dos players chegou √† uma condi√ß√£o de vit√≥ria,
+se isso ocorre passa para a fun√ß√£o main(): o player vencedor ou velha
 (para que esta possa imprimir o resultado do jogo.)*/
 //---------------------------------------------------------------------------------------
 
@@ -95,9 +95,9 @@ int search(char *vetor1, char *vetor2){
 
 
 //-----------------------------------------------------------------------------------------
-/*A funÁ„o curso_do_jogo(), atualiza o tabuleiro conforme as posiÁıes v„o sendo marcadas,
+/*A fun√ß√£o curso_do_jogo(), atualiza o tabuleiro conforme as posi√ß√µes v√£o sendo marcadas,
 imprimindo novamente, a cada jogada, o tabuleiro.
-A funÁ„o curso_do_jogo() recebe como par‚metro matrizTabuleiro, pertencente ‡ struct var*/
+A fun√ß√£o curso_do_jogo() recebe como par√¢metro matrizTabuleiro, pertencente √† struct var*/
 //-----------------------------------------------------------------------------------------
 
 int curso_do_jogo(var *info){
@@ -118,15 +118,15 @@ int curso_do_jogo(var *info){
 
 
 //---------------------------------------------------------------------------------------------------
-/*A funÁ„o validacao_opcao() verifica se o espaÁo escolhido pelo player ou pela m·quina est· vazio,
-se estiver preenchido pede para que seja escolhida outra posiÁ„o, caso contr·rio passa
-para a funÁ„o tabuleiro() a posiÁ„o, para que esta coloque a marca no lugar especificado.*/
+/*A fun√ß√£o validacao_opcao() verifica se o espa√ßo escolhido pelo player ou pela m√°quina est√° vazio,
+se estiver preenchido pede para que seja escolhida outra posi√ß√£o, caso contr√°rio passa
+para a fun√ß√£o tabuleiro() a posi√ß√£o, para que esta coloque a marca no lugar especificado.*/
 //---------------------------------------------------------------------------------------------------
 
 int validacao_opcao(int num, var *info){
     switch(num){
         case 1:
-            // verificando se o espaÁo esta vazio
+            // verificando se o espa√ßo esta vazio
             if(search("1",info->valida_opcao)== 0){
                 // armazenando as jogadas do player
                 if(info->player == 1){
@@ -152,7 +152,7 @@ int validacao_opcao(int num, var *info){
 
             }
         case 2:
-            // verificando se o espaÁo esta vazio
+            // verificando se o espa√ßo esta vazio
             if(search("2",info->valida_opcao)== 0){
                 // armazenando as jogadas do player
                 if(info->player == 1){
@@ -175,7 +175,7 @@ int validacao_opcao(int num, var *info){
                 break;
             }
         case 3:
-            // verificando se o espaÁo esta vazio
+            // verificando se o espa√ßo esta vazio
             if(search("3",info->valida_opcao)== 0){
                 // armazenando as jogadas do player
                 if(info->player == 1){
@@ -206,7 +206,7 @@ int validacao_opcao(int num, var *info){
             }else{
                 strcat(info->jogador_2,"4");
             }
-            // verificando se o espaÁo esta vazio
+            // verificando se o espa√ßo esta vazio
             if(search("4",info->valida_opcao)== 0){
                 strcat(info->valida_opcao,"4");
                 tabuleiro(0,6,6,info);
@@ -223,7 +223,7 @@ int validacao_opcao(int num, var *info){
                 break;
             }
         case 5:
-            // verificando se o espaÁo esta vazio
+            // verificando se o espa√ßo esta vazio
             if(search("5",info->valida_opcao)== 0){
                 if(info->player == 1){
                     strcat(info->jogador_1,"5");
@@ -245,7 +245,7 @@ int validacao_opcao(int num, var *info){
                 break;
             }
         case 6:
-            // verificando se o espaÁo esta vazio
+            // verificando se o espa√ßo esta vazio
             if(search("6",info->valida_opcao)== 0){
                 // armazenando as jogadas do player
                 if(info->player == 1){
@@ -269,7 +269,7 @@ int validacao_opcao(int num, var *info){
                 break;
             }
         case 7:
-            // verificando se o espaÁo esta vazio
+            // verificando se o espa√ßo esta vazio
             if(search("7",info->valida_opcao)== 0){
                 // armazenando as jogadas do player
                 if(info->player == 1){
@@ -293,7 +293,7 @@ int validacao_opcao(int num, var *info){
                 break;
             }
         case 8:
-            // verificando se o espaÁo esta vazio
+            // verificando se o espa√ßo esta vazio
             if(search("8",info->valida_opcao)== 0){
             	// armazenando as jogadas do player
                 if(info->player == 1){
@@ -317,7 +317,7 @@ int validacao_opcao(int num, var *info){
                 break;
             }
         case 9:
-            // verificando se o espaÁo esta vazio
+            // verificando se o espa√ßo esta vazio
             if(search("9",info->valida_opcao)== 0){
                 // armazenando as jogadas do player
                 if(info->player == 1){
@@ -353,7 +353,7 @@ int validacao_opcao(int num, var *info){
 
 
 //-----------------------------------------------------------------------------------------------------
-/*A funÁ„o tabuleiro() contem os parametros a e b que sao respectivamente inicio de intervalo
+/*A fun√ß√£o tabuleiro() contem os parametros a e b que sao respectivamente inicio de intervalo
 e fim de intervalo. ja o parametro c e alinha da matriz a ser selecionada
 com esse tres parametros eh possivel substituir uma matriz 4X4 em qualquer posicao da matriz ;*/
 //-----------------------------------------------------------------------------------------------------
@@ -484,8 +484,8 @@ int tabuleiro(int a, int b,int c,var *info){
 
 
 //----------------------------------------------------------------------------------------------------------
-/*A funÁ„o computer_ai() atua no modo single player marcando a posiÁ„o correspondente ‡ escolha da m·quina.
-Isso È feito utilizando a funÁ„o rand(), que sorteia uma posiÁ„o aleatÛria em um vetor com as posicoes vazias
+/*A fun√ß√£o computer_ai() atua no modo single player marcando a posi√ß√£o correspondente √† escolha da m√°quina.
+Isso √© feito utilizando a fun√ß√£o rand(), que sorteia uma posi√ß√£o aleat√≥ria em um vetor com as posicoes vazias
 */
 //-----------------------------------------------------------------------------------------------------------
 
@@ -526,8 +526,8 @@ int computer_ai(var *info){
 
 
 //--------------------------------------------------------------------------------------------------
-/*A funÁ„o interacao_players() verifica quais s„o os players, seus movimentos e passa as informaÁıes
-para a funÁ„o validacao_posicao()*/
+/*A fun√ß√£o interacao_players() verifica quais s√£o os players, seus movimentos e passa as informa√ß√µes
+para a fun√ß√£o validacao_posicao()*/
 //--------------------------------------------------------------------------------------------------
 
 int interacao_players(var *info){
@@ -614,16 +614,16 @@ int interacao_players(var *info){
 
 
 //--------------------------------------------------------
-// FunÁıes com os componentes principais do jogo da velha:
+// Fun√ß√µes com os componentes principais do jogo da velha:
 // desenhar_tabu(), bola(), x()
 //--------------------------------------------------------
 
 
 
 // --------------------------------------------------------------------------------------------------------
-/*Na funÁ„o desenhar_tabu() o primeiro 'for' usado preenche a matriz com espaÁos em branco,
-o segundo uso do 'for' substitui os espaÁos em branco, nos locais necess·rios, para formar o tabuleiro e
-ao fim s„o inseridos numeros nas posiÁıes a serem ocupadas pela marcas 'X' e 'O' apenas para que fique mais
+/*Na fun√ß√£o desenhar_tabu() o primeiro 'for' usado preenche a matriz com espa√ßos em branco,
+o segundo uso do 'for' substitui os espa√ßos em branco, nos locais necess√°rios, para formar o tabuleiro e
+ao fim s√£o inseridos numeros nas posi√ß√µes a serem ocupadas pela marcas 'X' e 'O' apenas para que fique mais
 intuitivo.*/
 // ---------------------------------------------------------------------------------------------------------
 int desenhar_tabu(var *info){
@@ -673,8 +673,8 @@ int desenhar_tabu(var *info){
 
 
 //-----------------------------------------------------------------------------------------------------------------------
-/*A func„o bola() desenha a marca bola que È formada por caracteres 'O' e ' ', primeiramente a matriz foi preenchida com
-o caractere ' ', depois foram substituidos os locais necess·rios para que o formato ficasse parecido com um cÌrculo. */
+/*A func√£o bola() desenha a marca bola que √© formada por caracteres 'O' e ' ', primeiramente a matriz foi preenchida com
+o caractere ' ', depois foram substituidos os locais necess√°rios para que o formato ficasse parecido com um c√≠rculo. */
 //-----------------------------------------------------------------------------------------------------------------------
 int  bola(var *info){
     int i, j;
@@ -707,7 +707,7 @@ int  bola(var *info){
 
 
 //--------------------------------------------------------------------------------------------------------
-/*A funÁ„o x() desenha, utilizando uma matriz, a marca 'X' utilizando os caracteres '\\' , '/' e ' '.  */
+/*A fun√ß√£o x() desenha, utilizando uma matriz, a marca 'X' utilizando os caracteres '\\' , '/' e ' '.  */
 //--------------------------------------------------------------------------------------------------------
 int x(var *info){
 	int i, j;
@@ -736,8 +736,8 @@ int x(var *info){
 
 
 // -------------------------------------------------------------------------------------------------
-/*A funÁ„o menu_incial possibilita ao(s) jogador(es) escolher(em) entre multiplayer ou single player
-e tambÈm escolher o sinal que ir· usar para marcar suas posiÁıes no tabuleiro.*/
+/*A fun√ß√£o menu_incial possibilita ao(s) jogador(es) escolher(em) entre multiplayer ou single player
+e tamb√©m escolher o sinal que ir√° usar para marcar suas posi√ß√µes no tabuleiro.*/
 // -------------------------------------------------------------------------------------------------
 
 int menu_inicial(var *info){
@@ -867,8 +867,8 @@ int menu_inicial(var *info){
 //-------------------------
 
 //-----------------------------------------------------------------------------------------------------------------------------
-/*Na funÁ„o main() È declarada uma variavel do tipo var(info), para que se possa acessar as v·riaveis da struct de mesmo nome.
-Nela tambÈm est„o as respostas para quando uma condiÁ„o de vitÛria ou velha È alcanÁada.*/
+/*Na fun√ß√£o main() √© declarada uma variavel do tipo var(info), para que se possa acessar as v√°riaveis da struct de mesmo nome.
+Nela tamb√©m est√£o as respostas para quando uma condi√ß√£o de vit√≥ria ou velha √© alcan√ßada.*/
 //-----------------------------------------------------------------------------------------------------------------------------
 
 int main(){
@@ -891,7 +891,7 @@ int main(){
         info.pontuacao[i] = 0;
     }
     system("cls");
-    // preechendo as funÁıes
+    // preechendo as fun√ß√µes
     desenhar_tabu(&info);
     bola(&info);
     x(&info);
